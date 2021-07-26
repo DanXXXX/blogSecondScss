@@ -1,0 +1,58 @@
+// 1. Inclusions de nos abstracts
+@import
+    'abstracts/variables';
+
+// 2. Inclusion de nos vendors
+/*
+    Ici, nous n'avons pas de dossier "vendors".
+    En effet, nous utilisons NPM, afin de gérer nos dépendances.
+    Du coup, nos "vendors", nos "dépendances" se trouvent dans le dossiers "node_modules"
+    Nous allons demander à node-sass, d'importer nos vendors depuis le dossier "node_modules"
+
+    ~ est un raccourci (= un alias) vers le répertoire "node_modules/"
+
+
+
+*/
+// le chemin ou retrouver le font-awesome dans node module
+$fa-font-path: '~font-awesome/fonts';
+
+/*
+    ATTENTION A BIEN REMPLIR OU COMMENTER CHAQUE LIGNE
+*/
+// 
+@import
+//  reset-css
+    '~reset-css/sass/reset',
+//le liens path du font awesome 4.7 
+    '~font-awesome/scss/font-awesome';
+
+
+// 3. Import de la base
+@import
+    'base/base';
+
+// 4. Import des layout
+@import
+    'layout/header',
+    'layout/sidebar',
+    'layout/main',
+    'layout/footer';
+
+
+// 5. Import des components
+@import
+    'components/logo',
+    'components/search.scss',
+    'components/aside-article',
+    'components/button',
+    'components/header-nav',
+    'components/post',
+    'components/footer-nav',
+    'components/sign',
+    'components/copyright';
+
+
+// 5. Import shame
+@import
+    'shame';
